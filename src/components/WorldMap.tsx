@@ -165,10 +165,11 @@ export const WorldMap: React.FC<WorldMapProps> = ({ markers, width, height, hide
       
     // Animate Markers Entry (Staggered)
     nodes.transition()
-      .delay((d, i) => i * 300) 
+      .delay((_d, i) => i * 300) 
       .duration(500)
       .ease(d3.easeBackOut)
       .attr("r", 5);
+  
 
     // Add pulsing effect for the last marker (active target)
     if (validMarkers.length > 0) {

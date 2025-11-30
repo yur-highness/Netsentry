@@ -39,6 +39,7 @@ export const DnsPropagation: React.FC = () => {
                   // Randomize result to simulate propagation
                   // If index is low (fast servers), mostly OK. If high, maybe mixed.
                   const isSuccess = Math.random() > 0.1; 
+                  console.log(`Checked ${domain} from ${loc.city}: ${isSuccess ? 'OK' : 'FAIL'}`);
                   
                   // Mock IP based on domain hash just to be consistent-ish
                   const mockIp = isSuccess ? `104.21.${domain.length}.${index + 10}` : undefined;
@@ -46,7 +47,8 @@ export const DnsPropagation: React.FC = () => {
                   next[index] = {
                       ...next[index],
                       status: isSuccess ? 'ok' : 'fail',
-                      ip: mockIp
+                      ip: mockIp,
+                      
                   };
                   return next;
               });

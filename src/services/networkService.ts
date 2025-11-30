@@ -47,7 +47,6 @@ export const getGeoData = async (ip: string = ''): Promise<GeoData> => {
       isp: 'Restricted / Offline',
       org: 'Fallback Network',
       asn: 'AS0000',
-      flag: '🇺🇸'
     };
   }
 };
@@ -183,6 +182,8 @@ export const generateMockHops = (targetGeo: GeoData): TraceHop[] => {
 
 export const scanPorts = async (target: string, startPort: number, endPort: number): Promise<PortScanResult[]> => {
     const results: PortScanResult[] = [];
+
+    console.log(`Starting port scan on ${target} from port ${startPort} to ${endPort}`);
     
     // Dictionary of common services
     const commonServices: Record<number, { service: string, desc: string, risk: 'Low' | 'Medium' | 'High' | 'Critical' }> = {

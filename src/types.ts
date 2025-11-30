@@ -86,18 +86,20 @@ export interface ScanHistory {
     details: any; // Flexible payload for specific results
 }
 
-export enum ToolType {
-  LANDING = 'LANDING',
-  DASHBOARD = 'DASHBOARD',
-  MAP = 'MAP',
-  SCANNER = 'SCANNER',
-  DNS = 'DNS',
-  AI_ANALYST = 'AI_ANALYST',
-  PROFILE = 'PROFILE',
-  SUBNET_CALC = 'SUBNET_CALC',
-  SSL_INSPECTOR = 'SSL_INSPECTOR',
-  CONFIG_GEN = 'CONFIG_GEN',
-  MAC_LOOKUP = 'MAC_LOOKUP',
-  DNS_PROPAGATION = 'DNS_PROPAGATION',
-  BOT_AUTOMATION = 'BOT_AUTOMATION'
-}
+export const ToolType = {
+  LANDING: 'LANDING',
+  DASHBOARD: 'DASHBOARD',
+  MAP: 'MAP',
+  SCANNER: 'SCANNER',
+  DNS: 'DNS',
+  AI_ANALYST: 'AI_ANALYST',
+  PROFILE: 'PROFILE',
+  SUBNET_CALC: 'SUBNET_CALC',
+  SSL_INSPECTOR: 'SSL_INSPECTOR',
+  CONFIG_GEN: 'CONFIG_GEN',
+  MAC_LOOKUP: 'MAC_LOOKUP',
+  DNS_PROPAGATION: 'DNS_PROPAGATION',
+  BOT_AUTOMATION: 'BOT_AUTOMATION'
+} as const;
+
+export type ToolType = typeof ToolType[keyof typeof ToolType];
