@@ -23,6 +23,39 @@ or forget about setting up the project
 live link of the project- https://netsentry-taupe.vercel.app/
 
 
+# features
+
+Landing Page: This is the initial page that users see when they access the app. It includes a hero section with a title and a description, as well as a grid background.
+
+Dashboard: This is the main page of the app where users can access various network scanning tools. It is accessible from the landing page.
+
+Network Tools: This section of the app provides several network scanning tools, including:
+Scanner: This tool allows users to perform network scans on a target IP or domain.
+
+Map: This tool visualizes network data on a world map.
+
+DNS: This tool allows users to check DNS records for a given domain.
+
+AI Analyst: This tool analyzes network data and provides security insights.
+
+Profile Settings: This tool allows users to manage their profile settings.
+
+Subnet Calculator: This tool allows users to calculate subnet details, such as the number of hosts and subnets.
+
+SSL Inspector: This tool allows users to inspect SSL certificates of a given domain.
+
+Config Generator: This tool generates network configuration files based on user input.
+
+MAC Lookup: This tool allows users to lookup MAC address information.
+
+DNS Propagation: This tool simulates DNS propagation by checking DNS records from different locations.
+
+Bot Automation: This tool allows users to automate network scanning tasks.
+
+Geolocation Tracker: This tool tracks the geolocation of DNS requests.
+The app is built using React, TypeScript, Vite, and Lucide React icons. It also uses GSAP for animations.
+
+
 
 # React + TypeScript + Vite
 

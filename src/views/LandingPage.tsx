@@ -546,7 +546,7 @@ const handleClick = () => {
               </p>
               <button 
               onClick={handleClick}
-                className="group relative px-10 py-5 bg-white text-slate-950 font-bold text-xl rounded-lg hover:bg-cyan-50 transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.5)] hover:-translate-y-1"
+                className="cursor-pointer group relative px-10 py-5 bg-white text-slate-950 font-bold text-xl rounded-lg hover:bg-cyan-50 transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.5)] hover:-translate-y-1"
               >
                   Launch Sentinel Console
                   <div className="absolute inset-0 rounded-lg ring-2 ring-white/50 group-hover:ring-cyan-400/50 transition-all"></div>
