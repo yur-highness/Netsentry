@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { GlobeVisualization } from '../components/GlobeVisualization';
 import { FeatureCard } from '../components/FeatureCard';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
