@@ -1,3 +1,29 @@
+
+# steps to launch the project
+
+
+Clone the Repository: Start by cloning the repository from GitHub. You can do this by running the following command in your terminal:
+git clone https://github.com/yur-highness/Netsentry.git
+
+Navigate to the Project Directory: Navigate to the project directory by running the following command:
+cd netsentry
+
+Install Dependencies: Install the project dependencies by running the following command:
+pnpm install
+
+Compile TypeScript: Compile the TypeScript code by running the following command:
+pnpm build
+
+Launch the Development Server: Launch the development server by running the following command:
+pnpm dev
+
+Open the Application: Open your browser and navigate to http://localhost:3000 to see the application in action.
+
+or forget about setting up the project  
+live link of the project- https://netsentry-taupe.vercel.app/
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +97,4 @@ export default defineConfig([
   },
 ])
 ```
+

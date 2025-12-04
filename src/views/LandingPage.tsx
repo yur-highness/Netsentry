@@ -17,12 +17,17 @@ import {
 } from 'lucide-react';
 import { GlobeVisualization } from '../components/GlobeVisualization';
 import { FeatureCard } from '../components/FeatureCard';
+// import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 
-interface LandingPageProps {
-  onEnter: () => void;
+const onEnter = () => {
+  window.location.href = '/dashboard';
 }
 interface StatItemProps {
   icon: any;     // <--- FIX
@@ -57,8 +62,13 @@ const StatItemSmall = ({ label, value }: { label: string, value: string }) => (
 );
 
 
-export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
+export const LandingPage: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+   const navigate = useNavigate();
+const handleClick = () => {
+  navigate('/dashboard');
+};
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -526,7 +536,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
          {/* FOOTER / CTA */}
       <footer className="py-24 relative overflow-hidden bg-slate-950 border-t border-white/5">
           {/* Background effects */}
-          <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/10 to-slate-950 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-cyan-900/10 to-slate-950 pointer-events-none"></div>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
           
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -535,6 +545,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
                   Launch the console now. No registration required for basic tools.
               </p>
               <button 
+              onClick={handleClick}
                 className="group relative px-10 py-5 bg-white text-slate-950 font-bold text-xl rounded-lg hover:bg-cyan-50 transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.5)] hover:-translate-y-1"
               >
                   Launch Sentinel Console
